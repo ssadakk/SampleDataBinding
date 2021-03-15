@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="userData"
+            type="com.ssadakk.sampledatabinding.UserProfile" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -21,11 +23,13 @@
             <TextView
                 android:id="@+id/txtName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="@{userData.name}"/>
             <TextView
                 android:id="@+id/txtAge"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="@{userData.age}"/>
 
         </LinearLayout>
 
