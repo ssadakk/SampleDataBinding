@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ssadakk.sampledatabinding.R
+import com.ssadakk.sampledatabinding.UserProfile
 
 class MainFragment : Fragment() {
 
@@ -25,6 +26,13 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
+
+        var users = ArrayList<UserProfile>()
+        users.add(UserProfile("name1", 10, "null"))
+        users.add(UserProfile("name2", 16, "null"))
+        users.add(UserProfile("name3", 18, "null"))
+        users.add(UserProfile("name4", 11, "null"))
+        users.add(UserProfile("name5", 22, "null"))
 
     }
 
