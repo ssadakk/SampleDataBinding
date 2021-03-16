@@ -13,8 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         val binding: MainActivityBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
 
-        binding.btnSimpleBindingFragment.setOnClickListener {
+        binding.btnSimpleBindingActivity.setOnClickListener {
             startActivity(Intent(this, SimpleBindingActivity::class.java))
+        }
+        binding.btnRecyclerBinding.setOnClickListener{
+            startActivity(Intent(this, RecyclerBindingActivity::class.java))
         }
     }
 }

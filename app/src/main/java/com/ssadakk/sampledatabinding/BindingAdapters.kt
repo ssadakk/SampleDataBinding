@@ -9,7 +9,7 @@ object BindingAdapters {
 
     @BindingAdapter("app:hideIfZero")
     @JvmStatic fun hideIfZero(view: View, number: Int) {
-        if(number === 0) view.visibility = View.INVISIBLE else view.visibility = View.VISIBLE
+        if(number == 0) view.visibility = View.INVISIBLE else view.visibility = View.VISIBLE
     }
 
     @BindingAdapter(value = ["app:progressScaled", "android:max"], requireAll = true)

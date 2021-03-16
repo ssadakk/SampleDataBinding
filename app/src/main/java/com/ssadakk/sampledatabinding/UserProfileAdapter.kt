@@ -1,36 +1,38 @@
 package com.ssadakk.sampledatabinding
 
+import android.text.Layout
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.ssadakk.sampledatabinding.databinding.ItemUserBinding
+import kotlinx.android.synthetic.main.item_user.view.*
 
-class UserProfileAdapter(private val dataSet:ArrayList<UserProfile>) : RecyclerView.Adapter<UserProfileAdapter.ViewHolder>() {
+class UserProfileAdapter(var data: LiveData<ArrayList<User>>) : RecyclerView.Adapter<UserProfileAdapter.ViewHolder>() {
 
-    class ViewHolder(private val binding:ItemUserBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: UserProfile) {
-            with(binding) {
-                userData = item
-                executePendingBindings()
-            }
-        }
-
+    inner class ViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
+    ) {
+        var txtName = itemView.txtName
+        var txtAge = itemView.txtAge
+        var txtLike = itemView.txtLike
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val binding : ItemUserBinding = ItemUserBinding.inflate(inflater, parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(parent)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+        data.value!!.get(position).let { item ->
+            with(holder) {
+                txtName.text = item.name
+                txtAge.text = item.age.toString()
+                txtLike.text = item.like.toString()
+            }
+        }
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return data.value!!.size
     }
 }

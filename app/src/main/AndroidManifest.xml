@@ -25,6 +25,10 @@
             android:name=".SimpleBindingActivity"
             android:label="@string/title_activity_simple_binding">
         </activity>
+        <activity
+            android:name=".RecyclerBindingActivity"
+            android:label="@string/title_activity_simple_binding">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

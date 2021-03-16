@@ -4,7 +4,7 @@
     <data>
         <variable
             name="userData"
-            type="com.ssadakk.sampledatabinding.UserProfile" />
+            type="com.ssadakk.sampledatabinding.User" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -29,7 +29,12 @@
                 android:id="@+id/txtAge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{userData.age}"/>
+                android:text="@{Integer.toString(userData.age)}"/>
+            <TextView
+                android:id="@+id/txtLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(userData.like)}"/>
 
         </LinearLayout>
 

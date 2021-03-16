@@ -14,12 +14,13 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnSimpleBindingFragment"
+            android:id="@+id/btnSimpleBindingActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Simple binding with button"
             />
         <Button
+            android:id="@+id/btnRecyclerBinding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Data binding with Recycler view"
