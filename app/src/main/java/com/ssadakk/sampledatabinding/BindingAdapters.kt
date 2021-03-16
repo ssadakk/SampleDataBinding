@@ -13,8 +13,8 @@ object BindingAdapters {
     }
 
     @BindingAdapter(value = ["app:progressScaled", "android:max"], requireAll = true)
-    @JvmStatic fun setProgress(progressBar: ProgressBar, likes: Int, max: Int)  {
-        Log.d("hmjoo", "likes : $likes , max : $max")
-        progressBar.progress = (likes)
+    @JvmStatic fun setProgress(progressBar: ProgressBar, counter: Int, max: Int)  {
+        Log.d("hmjoo", "counter : $counter , max : $max")
+        progressBar.progress = (counter)
     }
 }

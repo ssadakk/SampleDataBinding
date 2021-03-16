@@ -16,7 +16,7 @@
             android:id="@+id/txtLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{Integer.toString(viewmodel.likes)}"
+            android:text="@{Integer.toString(viewmodel.counter)}"
             />
         <ProgressBar
             android:id="@+id/progressBar"
@@ -24,14 +24,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:max="@{100}"
-            app:progressScaled="@{viewmodel.likes}"
-            app:hideIfZero="@{viewmodel.likes}"
+            app:progressScaled="@{viewmodel.counter}"
+            app:hideIfZero="@{viewmodel.counter}"
             />
         <Button
             android:id="@+id/btnLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> viewmodel.onLike()}"
+            android:onClick="@{() -> viewmodel.addCounter()}"
             android:text="BtnLike"/>
 
 

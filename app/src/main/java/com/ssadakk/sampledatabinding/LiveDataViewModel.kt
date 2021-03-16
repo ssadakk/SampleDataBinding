@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModel
 
 class LiveDataViewModel : ViewModel() {
 
-    private val _likes = MutableLiveData(0)
+    private val _counter = MutableLiveData(0)
 
-    val likes: LiveData<Int> = _likes
+    val counter: LiveData<Int> = _counter
 
-    fun onLike() {
-        _likes.value = (_likes.value ?: 0 ) + 1
+    fun addCounter() {
+        _counter.value = (_counter.value ?: 0 ) + 1
     }
 
 
