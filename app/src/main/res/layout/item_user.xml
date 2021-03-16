@@ -3,14 +3,16 @@
 
     <data>
         <variable
-            name="userData"
-            type="com.ssadakk.sampledatabinding.User" />
+            name="userViewModel"
+            type="com.ssadakk.sampledatabinding.UserViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:onClick="@{()->userViewModel.itemClicked()}">
         <ImageView
             android:id="@+id/imgProfile"
             android:layout_width="50dp"
@@ -24,17 +26,17 @@
                 android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{userData.name}"/>
+                />
             <TextView
                 android:id="@+id/txtAge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{Integer.toString(userData.age)}"/>
+                />
             <TextView
                 android:id="@+id/txtLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{Integer.toString(userData.like)}"/>
+                />
 
         </LinearLayout>
 

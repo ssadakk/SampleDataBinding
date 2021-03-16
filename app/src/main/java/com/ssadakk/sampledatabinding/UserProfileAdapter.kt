@@ -2,6 +2,7 @@ package com.ssadakk.sampledatabinding
 
 import android.text.Layout
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
@@ -34,5 +35,9 @@ class UserProfileAdapter(var data: LiveData<ArrayList<User>>) : RecyclerView.Ada
 
     override fun getItemCount(): Int {
         return data.value!!.size
+    }
+
+    fun onClickViewHolder(view: View, position: Int) {
+
     }
 }

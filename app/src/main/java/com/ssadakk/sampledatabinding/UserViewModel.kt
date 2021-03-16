@@ -1,5 +1,6 @@
 package com.ssadakk.sampledatabinding
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -14,5 +15,10 @@ class UserViewModel : ViewModel() {
         userData.add(User("name4", 23, "", 0))
         userData.add(User("name5", 24, "", 0))
         liveData.postValue(userData)
+    }
+
+    fun itemClicked() {
+        Log.e("hmjoo", "onItemClicked()")
+
     }
 }
