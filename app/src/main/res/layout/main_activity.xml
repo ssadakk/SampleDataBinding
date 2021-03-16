@@ -6,9 +6,23 @@
 
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" />
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSimpleBindingFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple binding with button"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data binding with Recycler view"
+            />
+    </LinearLayout>
 </layout>
